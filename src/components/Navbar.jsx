@@ -2,6 +2,7 @@ import React from 'react'
 import {AppBar, Toolbar, Typography, makeStyles, Button, ButtonGroup} from '@material-ui/core/'
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu'
+import CartIcon from './CartWidget';
 
 const useStyles = makeStyles(theme => ({
     offset: theme.mixins.toolbar,
@@ -20,8 +21,9 @@ const Navbar = () => {
                         <MenuIcon/>
                     </IconButton>
                     <Typography variant='h6' className={classes.title}>
-                            MiTienda
+                        MiTienda
                     </Typography>
+                    <Button><CartIcon/></Button>
                     <ButtonGroup variant="text" aria-label="text button group">
                         <Button href="#">Home</Button>
                         <Button href="#">About Us</Button>
