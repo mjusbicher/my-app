@@ -1,16 +1,14 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./NavBar/Navbar";
 import './App.css';
-import Container from "./components/Container";
-import ItemListContainer from "./components/ItemListContainer";
+import ItemCount from "./ItemCount/ItemCount"
 
 
 function App(){
   return(
     <>
       <Navbar />
-      <ItemListContainer />
-      <Container />
+      <ItemCount stock={5}/>
     </>
   );
 }

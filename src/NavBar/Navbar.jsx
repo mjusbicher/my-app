@@ -2,7 +2,7 @@ import React from 'react'
 import {AppBar, Toolbar, Typography, makeStyles, Button, ButtonGroup} from '@material-ui/core/'
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu'
-import CartIcon from './CartWidget';
+import CartIcon from '../CartWidget/CartWidget';
 
 const useStyles = makeStyles(theme => ({
     offset: theme.mixins.toolbar,
