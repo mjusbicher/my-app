@@ -15,7 +15,7 @@ const Navbar = () => {
     const classes = useStyles()
     return (
         <div>
-            <AppBar>
+            <AppBar color="white">
                 <Toolbar>
                     <IconButton>
                         <MenuIcon/>

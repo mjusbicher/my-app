@@ -39,7 +39,7 @@ function ItemCount({stock}){
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" onClick={subs} variant="outlined" color="success">-</Button>
+                <Button size="small" onClick={subs} variant="outlined" color="error">-</Button>
                 <p>{count}</p>
                 <Button size="small" onClick={adding} variant="outlined" color="success">+</Button>
                 <Button size="big" onClick={onAdd} variant="contained" color="success" >Agregar al carro</Button>
