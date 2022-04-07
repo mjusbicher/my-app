@@ -1,7 +1,7 @@
 .cardContainer{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 15px;
 }
 
@@ -9,14 +9,12 @@
     min-width: 20px !important;
     height: 25px;
     padding: 5px;
-    margin: 5px !important;
+    margin: 1px !important;
 }
 
 .buttonContainer{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
 }
 
 
