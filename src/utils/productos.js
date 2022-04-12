@@ -1,4 +1,4 @@
-const productos = [
+export const productos = [
     {
         id:1,
         nombre: 'Producto 1',
@@ -25,4 +25,27 @@ const productos = [
     }
 ]
 
-export default productos;
+export const producto =[
+    {
+        id:1,
+        nombre: 'Prueba',
+        precio: '$5.00',
+        imagen: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0dfbabc9-57b2-4d3e-95b5-b44e042310e8/playera-con-suela-sportswear-kmDnwx.png'
+    }
+]
+
+export const traerProductos = () => {
+    return new Promise((resolve, reject) =>{
+        setTimeout(() => {
+            resolve(productos);
+        }, 3000);
+    });
+};
+
+export const traerProducto = () => {
+    return new Promise((resolve, reject) =>{
+        setTimeout(() => {
+            resolve(producto);
+        }, 2000);
+    });
+};
