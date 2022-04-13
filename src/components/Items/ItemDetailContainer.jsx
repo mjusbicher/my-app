@@ -4,7 +4,7 @@ import { traerProducto } from '../../utils/productos';
 
 const ItemDetailContainer = () =>{
 
-    const [producto, setProducto] = useState({})
+    const [producto, setProducto] = useState([]);
 
     useEffect(() => {
         traerProducto()
@@ -14,7 +14,7 @@ const ItemDetailContainer = () =>{
 
     return(
         <>
-            <ItemDetail producto={producto}/>
+            {producto.map(p => <ItemDetail producto={p}/>)}
         </>
     );
 };

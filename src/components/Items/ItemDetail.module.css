@@ -1,4 +1,10 @@
 .containerDetail{
     display: flex;
+    width: auto;
     justify-content: space-between;
+    margin: 5px;
+}
+
+.containerDetailText{
+    color: white;
 }

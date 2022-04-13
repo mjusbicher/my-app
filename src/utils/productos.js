@@ -25,12 +25,20 @@ export const productos = [
     }
 ]
 
-export const producto =[
+export const producto = [
     {
         id:1,
-        nombre: 'Prueba',
-        precio: '$5.00',
-        imagen: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0dfbabc9-57b2-4d3e-95b5-b44e042310e8/playera-con-suela-sportswear-kmDnwx.png'
+        nombre: 'REMERA NIKE',
+        precio: '$10.00',
+        descripcion: 'Remera de manga corta para hombre',
+        imagen: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ac89d319-a3e1-47ab-b253-89c00401ecd6/playera-de-entrenamiento-dri-fit-legend-knTPqEkv.png'
+    },
+    {
+        id:2,
+        nombre: 'CAMPERA NIKE',
+        precio: '$25.00',
+        descripcion: 'Campera con capucha para hombre',
+        imagen: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/2e244913-7407-4175-9e40-248f8a89ba17/chamarra-de-golf-repel-tiger-woods-p5jpwt.png'
     }
 ]
 
