@@ -3,6 +3,7 @@ import {AppBar, Toolbar, Typography, makeStyles, Button, ButtonGroup} from '@mat
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu'
 import CartIcon from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
     offset: theme.mixins.toolbar,
@@ -23,11 +24,12 @@ const Navbar = () => {
                     <Typography variant='h6' className={classes.title}>
                         MiTienda
                     </Typography>
-                    <Button><CartIcon/></Button>
+                    <Button href="/"><CartIcon/></Button>
                     <ButtonGroup variant="text" aria-label="text button group">
-                        <Button href="#">Home</Button>
-                        <Button href="#">About Us</Button>
-                        <Button href="#">Contact</Button>
+                        <Link style={{ margin: '0px 7px'}} to="/category/remeras">REMERAS</Link>
+                        <Link style={{ margin: '0px 7px'}} to="/category/pantalones">PANTALONES</Link>
+                        <Link style={{ margin: '0px 7px'}} to="/category/camperas">CAMPERAS</Link>
+                        <Link style={{ margin: '0px 7px'}} to="/category/zapatillas">ZAPATILLAS</Link>
                     </ButtonGroup>
                 </Toolbar>
             </AppBar>
