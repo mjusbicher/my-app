@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './ItemDetail.module.css'
-import Button from '@mui/material/Button';
+import ItemCount from '../ItemCount/ItemCount';
 
 
 const ItemDetail = ({producto}) => {
@@ -11,7 +11,7 @@ const ItemDetail = ({producto}) => {
                 <h2>{producto.nombre}</h2>
                 <p>{producto.descripcion}</p>
                 <p>{producto.precio}</p>
-                <Button variant="outlined">COMPRAR</Button>
+                <ItemCount stock={5}/>
             </div>
         </div>
     );
