@@ -5,12 +5,13 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import ItemCount from "../ItemCount/ItemCount";
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
-function Item({id, nombre, precio, imagen}){
+function Item({id, imagen, nombre, precio}){
+
     return(
-        <Card key={id}>
+        <Card id={id}>
             <CardActionArea>
                 <CardMedia
                 component="img"

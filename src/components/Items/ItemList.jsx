@@ -3,9 +3,9 @@ import Item from "./Items";
 
 function ItemList({productos}) {
     return(
-        productos.map(p =>(
+        productos.map(p => (
             <Item
-            key={p.id}
+            id={p.id}
             nombre={p.nombre}
             precio={p.precio}
             imagen={p.imagen}/>
