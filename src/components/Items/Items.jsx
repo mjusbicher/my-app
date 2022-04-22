@@ -26,7 +26,7 @@ function Item({id, imagen, nombre, precio}){
                     <Typography variant="body2" color="text.secondary">
                         {precio}
                     </Typography>
-                    <ItemCount stock={5}/>
+                    <ItemCount stock={5} producto={{id, imagen, nombre, precio}}/>
                     <Link to={`/item/${id}`}>Ver Detalle</Link>
                 </CardContent>
             </CardActionArea>

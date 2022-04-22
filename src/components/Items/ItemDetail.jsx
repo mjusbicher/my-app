@@ -15,8 +15,6 @@ const ItemDetail = ({productos}) => {
         setNumber(cantidad);
     }
 
-    console.log(number)
-
     return(
         <React.Fragment>
             <CssBaseline/>
@@ -26,7 +24,7 @@ const ItemDetail = ({productos}) => {
                 <p>{productos.descripcion}</p>
                 <p>{productos.precio}</p>
                 {
-                    number === 0 ? <ItemCount stock={5} addToCart={addToCart}/> : <Link to='/cart'>Ir al carrito</Link>
+                    number === 0 ? <ItemCount stock={5} addToCart={addToCart} producto={productos}/> : <Link to='/cart'>Ir al carrito</Link>
                 }
             </Container>
         </React.Fragment>

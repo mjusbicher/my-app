@@ -1,21 +1,28 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import Button from '@mui/material/Button';
 import s from './itemCount.module.css'
+import { CartContext } from '../../Context/CartContext';
 
-function ItemCount({stock, addToCart}){
+function ItemCount({stock, producto}){
     const [count, setCount] = useState(0);
 
-    function adding(){
+    const { addItem } = useContext(CartContext);
+
+    const adding = () =>{
         if(count < stock){
         setCount(count + 1);}
     }
-    function subs(){
+    const subs = () =>{
         if(count > 0){
         setCount(count - 1);}
     }
-    // function onAdd(){
-    //     alert('Agregaste ' + count + ' productos a tu carrito');
-    // }
+    const handleClick = () => {
+        console.log(count)
+        if (count !== 0){
+            addItem({...producto, count})
+        }
+    }
+
 
     return(
         <>
@@ -25,7 +32,7 @@ function ItemCount({stock, addToCart}){
                     <p>{count}</p>
                     <Button size="small" className={s.buttonStyle}onClick={adding} variant="outlined" color="success">+</Button>
                 </div>
-                <Button size="big" onClick={()=>addToCart(count)} variant="contained" color="success" >Agregar al carro</Button>
+                <Button size="big" onClick={handleClick} variant="contained" color="success" >Agregar al carro</Button>
             </div>
         </>
     )
