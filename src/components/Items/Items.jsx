@@ -24,7 +24,7 @@ function Item({id, imagen, nombre, precio}){
                         {nombre}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        {precio}
+                        &#36;{precio}
                     </Typography>
                     <ItemCount stock={5} producto={{id, imagen, nombre, precio}}/>
                     <Link to={`/item/${id}`}>Ver Detalle</Link>

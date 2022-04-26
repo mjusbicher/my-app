@@ -6,7 +6,7 @@ import { CartContext } from '../../Context/CartContext';
 function ItemCount({stock, producto}){
     const [count, setCount] = useState(0);
 
-    const { addItem } = useContext(CartContext);
+    const { addItem,cart } = useContext(CartContext);
 
     const adding = () =>{
         if(count < stock){
@@ -17,9 +17,10 @@ function ItemCount({stock, producto}){
         setCount(count - 1);}
     }
     const handleClick = () => {
-        console.log(count)
         if (count !== 0){
-            addItem({...producto, count})
+            addItem({...producto, count});
+            setCount(0);
+            console.log(cart)
         }
     }
 
@@ -30,7 +31,7 @@ function ItemCount({stock, producto}){
                 <div className={s.buttonContainer}>
                     <Button size="small" className={s.buttonStyle} onClick={subs} variant="outlined" color="error">-</Button>
                     <p>{count}</p>
-                    <Button size="small" className={s.buttonStyle}onClick={adding} variant="outlined" color="success">+</Button>
+                    <Button size="small" className={s.buttonStyle} onClick={adding} variant="outlined" color="success">+</Button>
                 </div>
                 <Button size="big" onClick={handleClick} variant="contained" color="success" >Agregar al carro</Button>
             </div>

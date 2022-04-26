@@ -47,3 +47,14 @@ test('renders learn react link', () => {
                 <Button size="big" onClick={onAdd} variant="contained" color="success" >Agregar al carro</Button>
             </CardActions>
         </Card> */
+
+  //       const addItem = (item) =>{
+  //         const indexProduct = cart.findIndex((cartItem)=> cartItem.id === item.id);
+  //         if(indexProduct !== -1){
+  //             const newCart = [...cart];
+  //             newCart[indexProduct].count = newCart[indexProduct].count + item.count;
+  //         setCart(newCart);
+  //         } else {
+  //             setCart([...cart, item]);
+  //         }
+  // };
