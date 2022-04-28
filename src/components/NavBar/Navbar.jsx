@@ -7,7 +7,6 @@ import {
   ButtonGroup,
 } from "@material-ui/core/";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { CartContext } from "../../Context/CartContext";
@@ -30,23 +29,20 @@ const Navbar = () => {
     <div>
       <AppBar color="default">
         <Toolbar>
-          <IconButton>
-            <MenuIcon />
-          </IconButton>
           <Button className={classes.title}>
             <Link to="/" className={styles.navbar}>
               NIKE
             </Link>
           </Button>
-          <Button>
-            <Link to="/cart" className={styles.navbar}>
+          <Link to="/cart" className={styles.navbar}>
+            <Button>
               <IconButton aria-label="cart">
                 <Badge badgeContent={cart.length} color="success">
                   <ShoppingCartIcon />
                 </Badge>
               </IconButton>
-            </Link>
-          </Button>
+            </Button>
+          </Link>
           <ButtonGroup variant="text" aria-label="text button group">
             <Button>
               <Link className={styles.navbar} to="/category/remeras">

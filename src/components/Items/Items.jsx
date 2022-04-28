@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from 'react-router-dom'
+import Button from '@mui/material/Button'
 
 
 function Item({id, imagen, nombre, precio}){
@@ -15,7 +16,7 @@ function Item({id, imagen, nombre, precio}){
             <CardActionArea>
                 <CardMedia
                 component="img"
-                height="300"
+                height="350"
                 image={imagen}
                 alt="producto"
                 />
@@ -27,7 +28,9 @@ function Item({id, imagen, nombre, precio}){
                         &#36;{precio}
                     </Typography>
                     <ItemCount stock={5} producto={{id, imagen, nombre, precio}}/>
-                    <Link to={`/item/${id}`}>Ver Detalle</Link>
+                    <Button size="small" variant="text">
+                        <Link to={`/item/${id}`} style={{textDecoration: 'none'}}>Ver Detalle</Link>
+                    </Button>
                 </CardContent>
             </CardActionArea>
         </Card>

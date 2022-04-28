@@ -11,7 +11,6 @@ const Cart = () => {
     (previousValue, currentValue) => previousValue + currentValue.totalPrice,
     0
 );
-  console.log(totalValue)
 
   return (
     <>
@@ -32,7 +31,7 @@ const Cart = () => {
             <div className={styles.about}>
               <h1 className={styles.nombre}>{p.nombre}</h1>
               <h3 className={styles.descripcion}>{p.descripcion}</h3>
-              <p>&#36;{p.precio}</p>
+              <p>Precio: &#36;{p.precio}</p>
               <div className={styles.counter}>
                 <Button size="small" variant="contained" color="error" className={styles.btn}>-</Button>
                 <div className={styles.count}>{p.count}</div>
@@ -42,7 +41,7 @@ const Cart = () => {
             <Button onClick={() => removeItem(p.id)}>Remover</Button>
           </div>
         ))}
-        <h2>Valor total: ${totalValue}</h2>
+        <h2>Valor total: &#36;{totalValue}</h2>
     </>
   );
 };

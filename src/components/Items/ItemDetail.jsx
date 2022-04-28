@@ -22,7 +22,7 @@ const ItemDetail = ({productos}) => {
                 <img src={productos.imagen} alt={productos.nombre}/>
                 <h2>{productos.nombre}</h2>
                 <p>{productos.descripcion}</p>
-                <p>{productos.precio}</p>
+                <p>&#36;{productos.precio}</p>
                 {
                     number === 0 ? <ItemCount stock={5} addToCart={addToCart} producto={productos}/> : <Link to='/cart'>Ir al carrito</Link>
                 }
