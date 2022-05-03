@@ -5,12 +5,7 @@ import styles from "./Cart.module.css"
 import { Link } from 'react-router-dom'
 
 const Cart = () => {
-  const { cart, removeItem, clear } = useContext(CartContext);
-
-  const totalValue = cart.reduce(
-    (previousValue, currentValue) => previousValue + currentValue.totalPrice,
-    0
-);
+  const { cart, removeItem, clear, totalPrice } = useContext(CartContext);
 
   return (
     <>
@@ -19,8 +14,8 @@ const Cart = () => {
           <h5 className={styles.action} onClick={() => clear()}>Limpiar Carrito</h5>
         </div>
       <div>{cart.length === 0 && <div>
-        <h2>El carrito está vacío</h2>
-        <Link to="/">Volver a la página principal</Link>
+        <h2 className={styles.texts}>El carrito está vacío</h2>
+        <Link to="/" className={styles.texts}>Volver a la página principal</Link>
       </div>}</div>
       {cart.length > 0 &&
         cart.map((p) => (
@@ -41,7 +36,8 @@ const Cart = () => {
             <Button onClick={() => removeItem(p.id)}>Remover</Button>
           </div>
         ))}
-        <h2>Valor total: &#36;{totalValue}</h2>
+        <h2 className={styles.texts}>Valor total: &#36;{totalPrice}</h2>
+        <Link to="/checkout" className={styles.texts}>FINALIZAR COMPRA</Link>
     </>
   );
 };

@@ -52,3 +52,8 @@
 .count{
     font-size: 20px;
 }
+.texts{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}

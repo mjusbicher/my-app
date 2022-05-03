@@ -1,0 +1,26 @@
+.titleForm {
+    font-size: 2rem;
+}
+.formContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.checkoutForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    background-color: white;
+    margin: 2.5rem;
+    border-radius: 1rem;
+}
+.checkoutForm Button {
+    width: 10%;
+    margin: 3rem;
+}
+.checkoutForm input {
+    width: 60%;
+    padding:0.5rem;
+    border-radius: 0.3rem;
+}
