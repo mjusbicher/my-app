@@ -1,6 +1,7 @@
-Hola mundo!
+Este es mi primer proyectyo realizado con React.
+Es un ecommerce con funciones básicas inspirado en la pagina web de Nike y utilicé tecnologías como MaterialUI y Firebase.
 
-Mi nombre es Martin Jusbicher y este es mi primer proyecto realizado con React.
-Es un ecommerce inspirado en la pagina web de Nike. Utilicé la librería de MaterialUI y la base de datos Firebase.
+Espero que sea de tu agrado y estoy abierto a sugerencias!
+
 
 
