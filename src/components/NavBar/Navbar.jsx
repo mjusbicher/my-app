@@ -34,50 +34,50 @@ const Navbar = () => {
   return (
     <div>
       <AppBar color="default">
-        <Toolbar>
+        <Toolbar className={styles.navbar}>
           <Hidden smUp>
             <IconButton>
               <MenuIcon onClick={() => setOpen(true)}/>
             </IconButton>
           </Hidden>
-          <Button className={classes.title}>
-            <Link to="/" className={styles.navbar}>
+          <Button>
+            <Link to="/" className={styles.navbarTexts}>
               NIKE
             </Link>
           </Button>
-          <Link to="/cart" className={styles.navbar}>
-            <Button>
-              <IconButton aria-label="cart">
-                <Badge badgeContent={cart.length} color="success">
-                  <ShoppingCartIcon />
-                </Badge>
-              </IconButton>
-            </Button>
-          </Link>
           <Hidden xsDown>
             <ButtonGroup variant="text" aria-label="text button group">
               <Button>
-                <Link className={styles.navbar} to="/category/remeras">
+                <Link className={styles.navbarTexts} to="/category/remeras">
                   REMERAS
                 </Link>
               </Button>
               <Button>
-                <Link className={styles.navbar} to="/category/pantalones">
+                <Link className={styles.navbarTexts} to="/category/pantalones">
                   PANTALONES
                 </Link>
               </Button>
               <Button>
-                <Link className={styles.navbar} to="/category/camperas">
+                <Link className={styles.navbarTexts} to="/category/camperas">
                   CAMPERAS
                 </Link>
               </Button>
               <Button>
-                <Link className={styles.navbar} to="/category/zapatillas">
+                <Link className={styles.navbarTexts} to="/category/zapatillas">
                   ZAPATILLAS
                 </Link>
               </Button>
             </ButtonGroup>
           </Hidden>
+          <Link to="/cart" className={styles.navbarTexts}>
+            <Button className={styles.btn}>
+              <IconButton aria-label="cart">
+                <Badge badgeContent={cart.length} color="success">
+                  <ShoppingCartIcon/>
+                </Badge>
+              </IconButton>
+            </Button>
+          </Link>
         </Toolbar>
         <SwipeableDrawer 
         anchor="left" 
@@ -92,22 +92,22 @@ const Navbar = () => {
           </div>
           <Divider />
           <Button>
-            <Link className={styles.navbar} to="/category/remeras">
+            <Link className={styles.navbarTexts} to="/category/remeras">
               REMERAS
             </Link>
           </Button>
           <Button>
-            <Link className={styles.navbar} to="/category/pantalones">
+            <Link className={styles.navbarTexts} to="/category/pantalones">
               PANTALONES
             </Link>
           </Button>
           <Button>
-            <Link className={styles.navbar} to="/category/camperas">
+            <Link className={styles.navbarTexts} to="/category/camperas">
               CAMPERAS
             </Link>
           </Button>
           <Button>
-            <Link className={styles.navbar} to="/category/zapatillas">
+            <Link className={styles.navbarTexts} to="/category/zapatillas">
               ZAPATILLAS
             </Link>
           </Button>

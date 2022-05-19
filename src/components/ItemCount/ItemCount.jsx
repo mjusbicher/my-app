@@ -39,9 +39,9 @@ function ItemCount({stock, producto}){
         <>
             <div className={s.cardContainer} >
                 <div className={s.buttonContainer}>
-                    <Button size="small" className={s.buttonStyle} onClick={subs} variant="contained" color="error">-</Button>
+                    <Button size="small" className={s.buttonMinus} onClick={subs} variant="contained" color="error">-</Button>
                     <p>{count}</p>
-                    <Button size="small" className={s.buttonStyle} onClick={adding} variant="contained" color="success">+</Button>
+                    <Button size="small" className={s.buttonPlus} onClick={adding} variant="contained" color="success">+</Button>
                 </div>
                 <ThemeProvider theme={theme}>
                     <Button size="big" onClick={handleClick} variant="contained" color="neutral" >Agregar al carro</Button>

@@ -11,6 +11,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import styles from "./CheckoutForm.module.css";
+import { Card, CardContent, CardMedia } from "@material-ui/core";
 
 const style = {
     position: "absolute",
@@ -58,6 +59,7 @@ function CheckoutForm() {
     const handleClose = () => setOpen(false);
 
     return (
+    <>
         <div className={styles.formContainer}>
             <form
             className={styles.checkoutForm}
@@ -66,7 +68,7 @@ function CheckoutForm() {
                 sendOrder();
             }}
             >
-            <h1 className={styles.titleForm}>Checkout</h1>
+            <h1 className={styles.titleForm}>Datos del comprador</h1>
             <p>Nombre:</p>
             <input
                 type="text"
@@ -135,7 +137,28 @@ function CheckoutForm() {
                 </Box>
             </Modal>
             )}
+            <Box className={styles.resumeCart}>
+                <h1>Resumen de compra:</h1>
+                {cart.length > 0 &&
+                    cart.map((p) => (
+                    <Card className={styles.resumeCartCard}>
+                            <CardMedia 
+                            component="img" 
+                            image={p.imagen} 
+                            alt={p.nombre}
+                            className={styles.resumeCartImg}/>
+                        <CardContent sx={{ flex: '1 0 auto' }}>
+                            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                                <Typography component="div" variant="h5">{p.nombre}</Typography>
+                                <Typography variant="subtitle1" color="text.secondary" component="div">Cantidad: {p.count}</Typography>
+                            </Box>
+                        </CardContent>
+                    </Card>
+                    ))}
+                <h3>TOTAL A PAGAR:  &#36;{totalPrice}</h3>
+            </Box>
         </div>
+    </>
     );
 }
 

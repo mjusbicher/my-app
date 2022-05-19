@@ -24,12 +24,12 @@ function Item({id, imagen, nombre, precio}){
                     <Typography gutterBottom variant="h5" component="div">
                         {nombre}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="h6" color="text.secondary">
                         &#36;{precio}
                     </Typography>
                     <ItemCount stock={5} producto={{id, imagen, nombre, precio}}/>
                     <Button size="small" variant="text">
-                        <Link to={`/item/${id}`} style={{textDecoration: 'none'}}>Ver Detalle</Link>
+                        <Link to={`/item/${id}`} style={{textDecoration: 'underline'}}>Ver Detalle</Link>
                     </Button>
                 </CardContent>
             </CardActionArea>

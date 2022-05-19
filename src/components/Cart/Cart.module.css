@@ -44,12 +44,6 @@
 .counter{
     display: flex;
 }
-.btn{
-    min-width: 20px !important;
-    height: 25px;
-    padding: 5px;
-    margin: 2px !important;
-}
 .count{
     font-size: 20px;
 }
@@ -57,4 +51,11 @@
     display: flex;
     justify-content: center;
     text-decoration: none;
+}
+.stockLimit{
+    font-size: 20px;
+    color: red !important;
+}
+.btn{
+    justify-content: center;
 }

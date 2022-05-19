@@ -1,5 +1,12 @@
 .navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.navbarTexts{
     text-decoration: none;
     margin: 0px 7px;
     color: black;
+}
+.btn:hover{
+    background-color: transparent !important; 
 }

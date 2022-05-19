@@ -2,19 +2,26 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 15px;
 }
-
-.buttonStyle{
-    min-width: 20px !important;
-    height: 25px;
-    padding: 5px;
-    margin: 1px !important;
+.buttonMinus{
+    min-width: 25px !important;
+    height: 25px !important;
+    border-radius: 20px !important;
+    margin-right: 5px !important;
 }
-
+.buttonPlus{
+    min-width: 25px !important;
+    height: 25px !important;
+    border-radius: 20px !important;
+    margin-left: 5px !important;
+}
 .buttonContainer{
     display: flex;
     align-items: center;
+}
+p{
+    font-size: 15px;
+    font-weight: bold;
 }
 
 
